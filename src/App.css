@@ -39,6 +39,8 @@
 
 .panel{
   float:left;
+  background-size: cover;
+  background-position: center;
 }
 
 .logowrap{
