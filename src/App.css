@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  height:100vh;
 }
 
 .App-logo {
@@ -30,4 +31,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.panels{
+  display: block;
+}
+
+.panel{
+  float:left;
+}
+
+.logowrap{
+  cursor: pointer;
+  /* width: 3vw; */
+}
+.logo{
+  position: fixed;
+  top: 45px;
+  left: 3vw;
+  height:120px;
+  width: auto;
+  z-index: 1001;
+}
+
+/* a img{
+  border: 0;
+} */
+
+img{
+  max-width: 100%;
 }
