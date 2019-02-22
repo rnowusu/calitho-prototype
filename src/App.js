@@ -123,9 +123,18 @@ class App extends Component {
           <img className="logo" src={require("./images/calitho_logo.png")} alt="logo"/>
         </a>
 
-        <div class="menu"></div>
+        <div class="menu" style={{position: "fixed", zIndex: "2", background: "white",
+           width: menuOpen ? "100vw" : "0vw", height: menuOpen ? "100vh" : "0vh", display: "flex",
+           transition: "width 1s", right: "0vh"}}>
+           <div style={{background: "grey", width: "33.3%", height: "100%"}}></div>
+           <div style={{background: "darkGrey", width: "33.3%", height: "100%"}}></div>
+           <div style={{background: "lightGrey", width: "33.3%", height: "100%"}}></div>
+
+         </div>
+
         <div class="hamburger" style={{position: 'absolute', right: "4vh", top: "3vh", background: "#fff",
-           padding: "15px", borderRadius: "100%", width:"25px", height: "25px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+           padding: "15px", borderRadius: "100%", width:"25px", height: "25px", display: "flex", alignItems: "center",
+            justifyContent: "center", zIndex:"5"}}>
           <HamburgerMenu isOpen={!menuOpen} menuClicked={this.menuClicked} onClick={this.menuClicked}/>
         </div>
         <div class="arrows"></div>
