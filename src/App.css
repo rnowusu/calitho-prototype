@@ -63,3 +63,17 @@
 img{
   max-width: 100%;
 }
+
+h2{
+  font-size: 2em;
+}
+
+.additional_text{
+  display: none;
+}
+
+.text{
+  color: inherit;
+  font-size: 1.4em;
+  font-weight: bold;
+}

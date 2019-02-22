@@ -3,34 +3,112 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state={
+      menuOpen: false,
+      scrolledToRight: false
+
+    };
+  }
+  moveScreenLeft(){
+    this.setState({scrolledToRight: false})
+  }
+
+  moveScreenRight(){
+    this.setState({scrolledToRight: true})
+  }
+
   render() {
+    let { menuOpen, scrolledToRight } = this.state;
     return (
       <div className="App">
         <div className="panels" id="panelslider"
-          style={{marginLeft: "0%", width: "200vw", position: "absolute",
+          style={{marginLeft: scrolledToRight ? "-100%" :"0%", width: "200.5vw", position: "absolute",
             background: "#e5f4f9", overflow: "scroll"}}>
+
           <div className="panel" id="products" style={{backgroundImage: `url("https://calitho.brick.agency/wp-content/uploads/sites/40/2018/11/feature-image-products-thin-1.jpg")`, borderRight: "1px solid black",
-             width: "33.3333vw", height: "100vh", overflow: "hidden"}}>
+             width: "33.3333vw", height: "100vh", overflow: "hidden", display: "flex"}}>
+
+             <div class="copybox" style={{color: "white", margin: "auto", maxWidth: "90%"}}>
+               <h2>Products</h2>
+               <div class="text" style={{color: "inherit"}}>
+                 <p>We create standout projects that deliver as promised.</p>
+              </div>
+              <div class="additional_text ">Dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio. Dynamicus qui sequitur mutationem consuetudium lectorum mirum est notare! Minim veniam quis nostrud exerci tation ullamcorper suscipit lobortis. Luptatum zzril delenit augue duis dolore te feugait nulla? Quarta decima et quinta decima eodem modo, typi qui nunc nobis.
+              </div>
+            </div>
+
            </div>
 
           <div className="panel" id="markets" style={{backgroundImage: "url('https://calitho.brick.agency/wp-content/uploads/sites/40/2018/11/feature-image-markets-thin-2.jpg')", borderRight: "1px solid black",
-             width: "33.3333vw", height: "100vh", overflow: "hidden"}}>
+             width: "33.3333vw", height: "100vh", overflow: "hidden", display: "flex"}}>
+
+             <div class="copybox" style={{color: "black", height: "50vh", margin: "60vh auto auto auto"}}>
+               <h2>Markets</h2>
+               <div class="text">
+                 <p>We team with clients of every size and market to achieve their vision.</p>
+              </div>
+              <div class="additional_text ">Praesent luptatum zzril delenit augue duis dolore te feugait nulla! Esse molestie consequat vel illum dolore eu feugiat nulla facilisis at vero eros et. Autem vel eum iriure dolor in hendrerit in vulputate velit. Humanitatis per seacula quarta decima et quinta decima, eodem modo typi qui nunc nobis videntur parum! Lobortis nisl ut aliquip ex ea commodo consequat duis accumsan et iusto odio dignissim qui blandit!
+              </div>
+            </div>
+
            </div>
 
           <div className="panel" id="services" style={{backgroundImage: `url("https://calitho.brick.agency/wp-content/uploads/sites/40/2018/11/feature-image-services-thin.jpg")`, borderRight: "1px solid black",
-             width: "33.3333vw", height: "100vh", overflow: "hidden"}}>
+             width: "33.3333vw", height: "100vh", overflow: "hidden", display: "flex"}}>
+
+             <div class="copybox" style={{color: "white", margin: "auto", maxWidth: "90%"}}>
+               <h2>Services</h2>
+               <div class="text" style={{color: "inherit"}}>
+                 <p>Print, digital and marketing services with accomplished quality.</p>
+              </div>
+              <div class="additional_text ">Id quod mazim placerat facer possim assum typi non habent claritatem insitam est usus legentis in. Lectorum mirum est notare quam littera gothica quam nunc putamus parum.
+              </div>
+            </div>
+
            </div>
 
           <div className="panel" id="about-2" style={{backgroundImage: `url("https://calitho.brick.agency/wp-content/uploads/sites/40/2018/11/feature-image-about-thin.jpg")`, borderRight: "1px solid black",
-             width: "33.3333vw", height: "100vh", overflow: "hidden"}}>
+             width: "33.3333vw", height: "100vh", overflow: "hidden", display: "flex" }}>
+
+             <div class="copybox" style={{color: "white", margin: "15vh auto auto auto", maxWidth: "90%"}}>
+               <h2>About</h2>
+               <div class="text" style={{color: "inherit"}}>
+                 <p>At Calitho, we take your imagination and run with it. From our obsessive focus on quality to our zealous approach to customer service, we go all out to make every project shine. You dream it. We make it happen.</p>
+              </div>
+              <div class="additional_text ">
+              </div>
+            </div>
+
            </div>
 
           <div className="panel" id="pressroom" style={{backgroundImage: `url("https://calitho.brick.agency/wp-content/uploads/sites/40/2018/11/feature-image-press-thin.jpg")`, borderRight: "1px solid black",
-             width: "33.3333vw", height: "100vh", overflow: "hidden"}}>
+             width: "33.3333vw", height: "100vh", overflow: "hidden", display: "flex"}}>
+
+             <div class="copybox" style={{color: "white", margin: "15vh auto auto auto", maxWidth: "90%"}}>
+               <h2>Pressroom</h2>
+               <div class="text" style={{color: "inherit"}}>
+                 <p>Claritatem insitam est usus legentis in, iis qui facit eorum claritatem.</p>
+              </div>
+              <div class="additional_text ">Dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio. Dynamicus qui sequitur mutationem consuetudium lectorum mirum est notare! Minim veniam quis nostrud exerci tation ullamcorper suscipit lobortis. Luptatum zzril delenit augue duis dolore te feugait nulla? Quarta decima et quinta decima eodem modo, typi qui nunc nobis.
+              </div>
+            </div>
+
            </div>
 
           <div className="panel" id="contact-2" style={{backgroundImage: "transparent", borderRight: "1px solid black",
-             width: "33.3333vw", height: "100vh", overflow: "hidden"}}>
+             width: "33.3333vw", height: "100vh", overflow: "hidden", display: "flex"}}>
+
+             <div class="copybox" style={{color: "white", margin: "auto", maxWidth: "90%"}}>
+               <h2>Contact</h2>
+               <div class="text" style={{color: "inherit"}}>
+                 <p></p>
+              </div>
+              <div class="additional_text ">
+              </div>
+            </div>
+
            </div>
 
         </div>
