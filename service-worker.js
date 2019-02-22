@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/calitho-prototype/precache-manifest.d02d87f4de521017bb193c769eeb6823.js"
+  "/calitho-prototype/precache-manifest.851e3a366d4c6d0c421208b33f6a4e6d.js"
 );
 
 workbox.clientsClaim();

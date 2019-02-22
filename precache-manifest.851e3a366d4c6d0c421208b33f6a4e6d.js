@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/calitho-prototype/static/css/main.171b9351.chunk.css"
   },
   {
-    "revision": "e1aa991d19d58fcf38750ff4eb3e86ad",
+    "revision": "d32921635d3a55b9616ec66b3248e38d",
     "url": "/calitho-prototype/index.html"
   }
 ];
