@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import HamburgerMenu from 'react-hamburger-menu'
 
 class App extends Component {
   constructor(props){
@@ -10,6 +11,8 @@ class App extends Component {
       scrolledToRight: false
 
     };
+
+    this.menuClicked = this.menuClicked.bind(this)
   }
   moveScreenLeft(){
     this.setState({scrolledToRight: false})
@@ -17,6 +20,10 @@ class App extends Component {
 
   moveScreenRight(){
     this.setState({scrolledToRight: true})
+  }
+
+  menuClicked(){
+    this.setState({menuOpen: !this.state.menuOpen})
   }
 
   render() {
@@ -115,6 +122,13 @@ class App extends Component {
         <a className="logowrap " href="/">
           <img className="logo" src={require("./images/calitho_logo.png")} alt="logo"/>
         </a>
+
+        <div class="menu"></div>
+        <div class="hamburger" style={{position: 'absolute', right: "4vh", top: "3vh", background: "#fff",
+           padding: "15px", borderRadius: "100%", width:"25px", height: "25px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+          <HamburgerMenu isOpen={!menuOpen} menuClicked={this.menuClicked} onClick={this.menuClicked}/>
+        </div>
+        <div class="arrows"></div>
 
       </div>
     );
